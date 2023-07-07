@@ -6,22 +6,18 @@ const Homepage = () => {
 
   return (
     <>
-    <div className="container-fluid">
-      <div className="row">
-      {data.map((items) => {
-        const {
-          photographer,
-          src: { large },
-        } = items;
-        return (
-          
-              <Picture photographer={photographer} src={large} />
-           
-        );
-      })}
+      <div className="container mb-5 ">
+        <div className="row ">
+          <h1 className="text-center text-info">Image Gallery</h1>
+          {data.map((items) => {
+            const {
+              photographer,
+              src: { large },
+            } = items;
+            return <Picture photographer={photographer} src={large} />;
+          })}
+        </div>
       </div>
-    </div>
-     
     </>
   );
 };
